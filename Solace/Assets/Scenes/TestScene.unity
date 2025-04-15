@@ -347,6 +347,34 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &624835098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624835090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b17473b77a3151940b6ccf2336e760aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrowPrefab: {fileID: 2982503576002844631, guid: 5e5b0971b79506b4ba57057d49b9b564, type: 3}
+  arrowSpawnPoint: {fileID: 635940525}
+  mainCamera: {fileID: 1939023398}
+  playerTransform: {fileID: 803918265}
+  playerAnimator: {fileID: 624835097}
+  arrowForce: 25
+  zoomFOV: 60
+  normalFOV: 90
+  zoomSpeed: 5
+  slowMotionTimeScale: 0.3
+  rotationSpeed: 10
+--- !u!4 &635940525 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1212393692824576205, guid: 2f81a98337bcb9342ba228849efe4042, type: 3}
+  m_PrefabInstance: {fileID: 8051715633518463570}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &743928842
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,6 +480,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 56.26, z: 0}
+--- !u!4 &803918265 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8335147614129758707, guid: 2f81a98337bcb9342ba228849efe4042, type: 3}
+  m_PrefabInstance: {fileID: 8051715633518463570}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &999018998
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,6 +1055,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &1939023398 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3180085697072998238, guid: 2f81a98337bcb9342ba228849efe4042, type: 3}
+  m_PrefabInstance: {fileID: 8051715633518463570}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2088542829
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,7 +1223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1456145579929357987, guid: 2f81a98337bcb9342ba228849efe4042, type: 3}
       propertyPath: projectionSpeed
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1456145579929357987, guid: 2f81a98337bcb9342ba228849efe4042, type: 3}
       propertyPath: projectionPrefab
@@ -1209,7 +1247,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3463976165294366457, guid: 2f81a98337bcb9342ba228849efe4042, type: 3}
       propertyPath: m_Constraints
-      value: 112
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398168908958479408, guid: 2f81a98337bcb9342ba228849efe4042, type: 3}
+      propertyPath: pitchMax
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7398168908958479408, guid: 2f81a98337bcb9342ba228849efe4042, type: 3}
       propertyPath: pitchMin
@@ -1223,6 +1265,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 572036996298374673, guid: 2f81a98337bcb9342ba228849efe4042, type: 3}
       insertIndex: -1
       addedObject: {fileID: 624835097}
+    - targetCorrespondingSourceObject: {fileID: 572036996298374673, guid: 2f81a98337bcb9342ba228849efe4042, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 624835098}
   m_SourcePrefab: {fileID: 100100000, guid: 2f81a98337bcb9342ba228849efe4042, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
