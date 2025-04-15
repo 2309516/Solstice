@@ -44,12 +44,27 @@ public class PlayerMovement : MonoBehaviour
     [Header("Dash VFX")]
     public ParticleSystem dashSpeedLines;
 
+    [Header("Projection Teleport Settings")]
+    public GameObject projectionPrefab;
+    public float projectionSpeed = 10f;
+    public float maxProjectionDistance = 30f;
+
+    private GameObject activeProjection;
+    private Vector3 projectionStartPos;
+    private bool isProjecting = false;
+
+    private Animator playerAnimator;
+
+    private void Awake()
+    {
+        playerAnimator = GetComponent<Animator>();
+    }
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         mainCamera = Camera.main;
         cameraInitialPos = mainCamera.transform.localPosition;
-
     }
 
     private void FixedUpdate()
@@ -73,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
         {
             StartCoroutine(PerformDash());
         }
-            if (Input.GetKeyDown(KeyCode.LeftShift) && !isGrounded && canAirDash && !hasDashedInAir)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !isGrounded && canAirDash && !hasDashedInAir)
         {
             StartCoroutine(PerformDash());
         }
@@ -93,6 +108,22 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpBufferCounter -= Time.deltaTime;
         }
+
+        if (Input.GetKeyDown(KeyCode.E) && !isProjecting)
+        {
+            StartProjection();
+        }
+
+        if (Input.GetKeyUp(KeyCode.E) && isProjecting)
+        {
+            EndProjection();
+        }
+
+        if (playerAnimator != null)
+        {
+            bool isWalking = inputDir.magnitude >= 0.1f;
+            playerAnimator.SetBool("Walking", isWalking);
+        }
     }
 
     private void Move()
@@ -110,18 +141,18 @@ public class PlayerMovement : MonoBehaviour
             Vector3 camForward = mainCamera.transform.forward;
             camForward.y = 0f;
             camForward.Normalize();
+
             Vector3 camRight = mainCamera.transform.right;
             camRight.y = 0f;
             camRight.Normalize();
+
             Vector3 moveDir = (camForward * inputDir.z + camRight * inputDir.x).normalized;
 
             rb.MovePosition(rb.position + moveDir * targetSpeed * Time.fixedDeltaTime);
 
-            if (isGrounded)
-            {
-                Quaternion targetRotation = Quaternion.LookRotation(moveDir);
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-            }
+            Quaternion targetRotation = Quaternion.LookRotation(moveDir);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            
         }
 
         if (jumpBufferCounter > 0f && isGrounded)
@@ -139,83 +170,124 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpBufferCounter -= Time.deltaTime;
         }
+
     }
 
     private void Jump()
-    {
-        rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-    }
+{
+    Vector3 velocity = rb.velocity;
+    velocity.y = 0f;
+    rb.velocity = velocity;
+
+    rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+}
+
 
     void GroundCheck()
-{
-    isGrounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundMask);
-
-    if (isGrounded)
     {
-        hasDashedInAir = false;
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundMask);
+
+        if (isGrounded)
+        {
+            hasDashedInAir = false;
+        }
     }
-}
+
+    void StartProjection()
+    {
+        isProjecting = true;
+        projectionStartPos = transform.position;
+
+        Vector3 spawnPos = transform.position + mainCamera.transform.forward * 1.5f;
+        activeProjection = Instantiate(projectionPrefab, spawnPos, transform.rotation);
+
+        StartCoroutine(MoveProjection());
+    }
+
+    void EndProjection()
+    {
+        if (activeProjection != null)
+        {
+            transform.position = activeProjection.transform.position;
+            Destroy(activeProjection);
+        }
+
+        isProjecting = false;
+    }
 
     IEnumerator PerformDash()
     {
-    if (!canAirDash && !isGrounded)
-        yield break;
+        if (!canAirDash && !isGrounded)
+            yield break;
 
-    if (isGrounded)
-    {
-        hasDashedInAir = false;
-    }
-    else if (hasDashedInAir)
-    {
-        yield break;
-    }
+        if (isGrounded)
+        {
+            hasDashedInAir = false;
+        }
+        else if (hasDashedInAir)
+        {
+            yield break;
+        }
 
-    isDashing = true;
+        isDashing = true;
 
-    Vector3 camForward = mainCamera.transform.forward;
-    camForward.y = 0f;
-    camForward.Normalize();
-    Vector3 camRight = mainCamera.transform.right;
-    camRight.y = 0f;
-    camRight.Normalize();
+        Vector3 camForward = mainCamera.transform.forward;
+        camForward.y = 0f;
+        camForward.Normalize();
+        Vector3 camRight = mainCamera.transform.right;
+        camRight.y = 0f;
+        camRight.Normalize();
 
-    Vector3 dashDir = (camForward * inputDir.z + camRight * inputDir.x).normalized;
+        Vector3 dashDir = (camForward * inputDir.z + camRight * inputDir.x).normalized;
 
-    rb.velocity = Vector3.zero;
-    rb.AddForce(dashDir * dashForce, ForceMode.VelocityChange);
+        rb.velocity = Vector3.zero;
+        rb.AddForce(dashDir * dashForce, ForceMode.VelocityChange);
 
-    if (dashSpeedLines != null) dashSpeedLines.Play();
-    StartCoroutine(CameraShake());
+        if (dashSpeedLines != null) dashSpeedLines.Play();
+        StartCoroutine(CameraShake());
 
+        hasDashedInAir = true;
 
-    hasDashedInAir = true;
+        yield return new WaitForSeconds(dashDuration);
 
-    yield return new WaitForSeconds(dashDuration);
+        if (dashSpeedLines != null) dashSpeedLines.Stop();
 
-    if (dashSpeedLines != null) dashSpeedLines.Stop();
+        rb.velocity = new Vector3(0f, rb.velocity.y, 0f);
 
-    rb.velocity = new Vector3(0f, rb.velocity.y, 0f);
-
-    isDashing = false;
+        isDashing = false;
     }
 
     IEnumerator CameraShake()
     {
-    float elapsed = 0f;
+        float elapsed = 0f;
 
-    while (elapsed < shakeDuration)
+        while (elapsed < shakeDuration)
+        {
+            float offsetX = Random.Range(-1f, 1f) * shakeMagnitude;
+            float offsetY = Random.Range(-1f, 1f) * shakeMagnitude;
+
+            mainCamera.transform.localPosition = cameraInitialPos + new Vector3(offsetX, offsetY, 0);
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        mainCamera.transform.localPosition = cameraInitialPos;
+    }
+
+    IEnumerator MoveProjection()
     {
-        float offsetX = Random.Range(-1f, 1f) * shakeMagnitude;
-        float offsetY = Random.Range(-1f, 1f) * shakeMagnitude;
+        while (isProjecting && activeProjection != null)
+        {
+            activeProjection.transform.position += mainCamera.transform.forward * projectionSpeed * Time.deltaTime;
 
-        mainCamera.transform.localPosition = cameraInitialPos + new Vector3(offsetX, offsetY, 0);
+            float distance = Vector3.Distance(projectionStartPos, activeProjection.transform.position);
+            if (distance >= maxProjectionDistance)
+            {
+                EndProjection();
+                yield break;
+            }
 
-        elapsed += Time.deltaTime;
-        yield return null;
+            yield return null;
+        }
     }
-    mainCamera.transform.localPosition = cameraInitialPos;
-    }
-
-
 }
