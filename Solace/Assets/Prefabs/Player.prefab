@@ -232,6 +232,10 @@ MonoBehaviour:
   projectionPrefab: {fileID: 0}
   projectionSpeed: 10
   maxProjectionDistance: 30
+  animStrings:
+    forward: Forward
+    side: Side
+    sprint: Sprint
 --- !u!1 &769115474769480359
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,15 +313,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 898045858246463704, guid: 36f94a163b86a6d428e7ed95dc2202ab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.021
+      value: 0.0029
       objectReference: {fileID: 0}
     - target: {fileID: 898045858246463704, guid: 36f94a163b86a6d428e7ed95dc2202ab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.107
+      value: 0.1191
       objectReference: {fileID: 0}
     - target: {fileID: 898045858246463704, guid: 36f94a163b86a6d428e7ed95dc2202ab, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.033
+      value: 0.0358
       objectReference: {fileID: 0}
     - target: {fileID: 898045858246463704, guid: 36f94a163b86a6d428e7ed95dc2202ab, type: 3}
       propertyPath: m_LocalRotation.w

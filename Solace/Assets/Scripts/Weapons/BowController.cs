@@ -27,6 +27,39 @@ public class BowController : MonoBehaviour
 
     private List<GameObject> arrows = new List<GameObject>();
     private int maxArrows = 10;
+
+    [System.Serializable]
+    public class BowSettings
+    {
+        [Header("ArrowSettings")]
+        public float arrowCount;
+        public GameObject arrowPrefab;
+        public Transform arrowPosition;
+
+        [Header("Equip & Unequip Settings")]
+        public Transform EquipPos;
+        public Transform UnequipPos;
+
+        public Transform UnequipParent;
+        public Transform EquipParent;
+
+        [Header("Bow String Settings")]
+        public Transform bowString;
+        public Transform stringInitialPos;
+        public Transform stringPullPos;
+        public Transform stringInitialParent;
+    }
+    [SerializeField]
+    public BowSettings bowSettings;
+
+        [Header("Crosshair Settings")]
+        public GameObject crosshairPrefab;
+        public GameObject currentCrosshair;
+
+        bool canPullString = false;
+        bool canFireArrow = false;
+
+
     private void Start()
     {
         if (mainCamera == null)
@@ -48,6 +81,39 @@ public class BowController : MonoBehaviour
         }
     }
 
+    void equipBow()
+    {
+        this.transform.position = bowSettings.EquipPos.position;
+        this.transform.rotation = bowSettings.EquipPos.rotation;
+        this.transform.parent = bowSettings.EquipParent;
+
+    }
+
+    void unequipBow()
+    {
+        this.transform.position = bowSettings.UnequipPos.position;
+        this.transform.rotation = bowSettings.UnequipPos.rotation;
+        this.transform.parent = bowSettings.UnequipParent;
+        
+    }
+
+    public void ShowCrosshair(Vector3 crosshairPos)
+    {
+        if (!currentCrosshair)
+        {
+            currentCrosshair = Instantiate(crosshairPrefab) as GameObject;
+        }
+        currentCrosshair.transform.position = crosshairPos;
+        currentCrosshair.transform.LookAt(Camera.main.transform);
+    }
+
+    public void removeCrosshair()
+    {
+        if (currentCrosshair)
+        {
+            Destroy(currentCrosshair);
+        }
+    }
     void HandleBowDrawAndShoot()
     {
         if (Input.GetMouseButtonDown(0))

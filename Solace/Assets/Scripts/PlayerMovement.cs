@@ -61,6 +61,9 @@ public class PlayerMovement : MonoBehaviour
         public string forward = "Forward";
         public string side = "Side";
         public string sprint = "Sprint";
+        public string aim = "Aim";
+        public string pull = "PullString";
+        public string fire = "Fire";
     }
 
     [SerializeField]
@@ -177,13 +180,13 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void Jump()
-{
-    Vector3 velocity = rb.velocity;
-    velocity.y = 0f;
-    rb.velocity = velocity;
+    {
+        Vector3 velocity = rb.velocity;
+        velocity.y = 0f;
+        rb.velocity = velocity;
 
-    rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-}
+        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+    }
 
 
     void GroundCheck()
@@ -271,6 +274,19 @@ public class PlayerMovement : MonoBehaviour
         playerAnim.SetBool(animStrings.sprint, isSprinting);
     }
 
+    public void CharacterAim(bool aiming)
+    {
+        playerAnim.SetBool(animStrings.aim, aiming);
+    }
+
+    public void CharacterPullString(bool pull)
+    {
+        playerAnim.SetBool(animStrings.pull, pull);
+    }
+    public void CharacterFireArrow()
+    {
+        playerAnim.SetTrigger(animStrings.fire);
+    }
     IEnumerator CameraShake()
     {
         float elapsed = 0f;

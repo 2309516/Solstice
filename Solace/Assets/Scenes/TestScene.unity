@@ -363,13 +363,27 @@ MonoBehaviour:
   arrowSpawnPoint: {fileID: 635940525}
   mainCamera: {fileID: 1939023398}
   playerTransform: {fileID: 803918265}
-  arrowForce: 25
+  arrowForce: 50
   zoomFOV: 60
   normalFOV: 90
   zoomSpeed: 5
   slowMotionTimeScale: 0.3
   maxSlowdownDuration: 2
   cooldownTime: 5
+  bowSettings:
+    arrowCount: 10
+    arrowPrefab: {fileID: 0}
+    arrowPosition: {fileID: 0}
+    EquipPos: {fileID: 0}
+    UnequipPos: {fileID: 0}
+    UnequipParent: {fileID: 0}
+    EquipParent: {fileID: 0}
+    bowString: {fileID: 0}
+    stringInitialPos: {fileID: 0}
+    stringPullPos: {fileID: 0}
+    stringInitialParent: {fileID: 0}
+  crosshairPrefab: {fileID: 0}
+  currentCrosshair: {fileID: 0}
 --- !u!114 &624835103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,6 +400,8 @@ MonoBehaviour:
     forwardInput: Vertical
     sideInput: Horizontal
     sprintInput: Sprint
+    aimInput: Fire2
+    fire: Fire1
 --- !u!4 &635940525 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1212393692824576205, guid: 2f81a98337bcb9342ba228849efe4042, type: 3}
