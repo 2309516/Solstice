@@ -53,18 +53,26 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 projectionStartPos;
     private bool isProjecting = false;
 
-    private Animator playerAnimator;
+    Animator playerAnim;
 
-    private void Awake()
+    [System.Serializable]
+    public class AnimationStrings
     {
-        playerAnimator = GetComponent<Animator>();
+        public string forward = "Forward";
+        public string side = "Side";
+        public string sprint = "Sprint";
     }
+
+    [SerializeField]
+    public AnimationStrings animStrings;
+
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         mainCamera = Camera.main;
         cameraInitialPos = mainCamera.transform.localPosition;
+        playerAnim = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -119,11 +127,6 @@ public class PlayerMovement : MonoBehaviour
             EndProjection();
         }
 
-        if (playerAnimator != null)
-        {
-            bool isWalking = inputDir.magnitude >= 0.1f;
-            playerAnimator.SetBool("Walking", isWalking);
-        }
     }
 
     private void Move()
@@ -255,6 +258,17 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector3(0f, rb.velocity.y, 0f);
 
         isDashing = false;
+    }
+    
+    public void AnimateCharacter(float forward, float side)
+    {
+        playerAnim.SetFloat(animStrings.forward, forward);
+        playerAnim.SetFloat(animStrings.side, side);
+    }
+
+    public void Sprint(bool isSprinting)
+    {
+        playerAnim.SetBool(animStrings.sprint, isSprinting);
     }
 
     IEnumerator CameraShake()

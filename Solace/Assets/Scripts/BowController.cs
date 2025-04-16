@@ -8,7 +8,6 @@ public class BowController : MonoBehaviour
     public Transform arrowSpawnPoint;
     public Camera mainCamera;
     public Transform playerTransform;
-    public Animator playerAnimator; // Add your animator reference here
 
     [Header("Settings")]
     public float arrowForce = 25f;
@@ -40,7 +39,6 @@ public class BowController : MonoBehaviour
     {
         HandleZoom();
         HandleBowDrawAndShoot();
-        HandleShootingAnimation();
 
         HandleSlowMotionCooldown();
 
@@ -64,19 +62,6 @@ public class BowController : MonoBehaviour
         }
     }
 
-    void HandleShootingAnimation()
-    {
-        if (playerAnimator == null) return;
-
-        if (Input.GetMouseButton(0))
-        {
-            playerAnimator.SetBool("IsShooting", true);
-        }
-        else
-        {
-            playerAnimator.SetBool("IsShooting", false);
-        }
-    }
 
     void HandleZoom()
     {

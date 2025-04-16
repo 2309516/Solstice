@@ -9,11 +9,11 @@ C:\Program Files\Unity\Hub\Editor\2022.3.48f1\Editor\Unity.exe
 -batchMode
 -noUpm
 -name
-AssetImportWorker1
+AssetImportWorker4
 -projectPath
 C:/Users/bradl/OneDrive/Documents/GitHub/Solstice/Solace
 -logFile
-Logs/AssetImportWorker1.log
+Logs/AssetImportWorker4.log
 -srvPort
 65022
 Successfully changed project path to: C:/Users/bradl/OneDrive/Documents/GitHub/Solstice/Solace
@@ -49,14 +49,14 @@ C:/Users/bradl/OneDrive/Documents/GitHub/Solstice/Solace
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [33396]  Target information:
+Player connection [40724]  Target information:
 
-Player connection [33396]  * "[IP] 192.168.0.9 [Port] 0 [Flags] 2 [Guid] 2317997793 [EditorId] 2317997793 [Version] 1048832 [Id] WindowsEditor(7,Bradley_Curtis) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [40724]  * "[IP] 192.168.0.9 [Port] 0 [Flags] 2 [Guid] 1800676228 [EditorId] 1800676228 [Version] 1048832 [Id] WindowsEditor(7,Bradley_Curtis) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [33396] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [33396] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [40724] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [40724] Host joined alternative multi-casting on [225.0.0.222:34997]...
 [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
-Refreshing native plugins compatible for Editor in 9.41 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 9.26 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.48f1 (8bf49c377ebf)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.48f1/Editor/Data/Resources/UnitySubsystems
@@ -72,44 +72,44 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.48f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.48f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.48f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56728
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56832
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.48f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006871 seconds.
-- Loaded All Assemblies, in  0.313 seconds
+Registered in 0.006578 seconds.
+- Loaded All Assemblies, in  0.298 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
 - Finished resetting the current domain, in  0.237 seconds
-Domain Reload Profiling: 547ms
-	BeginReloadAssembly (101ms)
+Domain Reload Profiling: 533ms
+	BeginReloadAssembly (90ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (29ms)
+	RebuildCommonClasses (27ms)
 	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (53ms)
-	LoadAllAssembliesAndSetupDomain (120ms)
-		LoadAssemblies (97ms)
+	initialDomainReloadingComplete (54ms)
+	LoadAllAssembliesAndSetupDomain (116ms)
+		LoadAssemblies (88ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (118ms)
-			TypeCache.Refresh (117ms)
-				TypeCache.ScanAssembly (105ms)
+		AnalyzeDomain (114ms)
+			TypeCache.Refresh (113ms)
+				TypeCache.ScanAssembly (102ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (237ms)
+	FinalizeReload (238ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (197ms)
+		SetupLoadedEditorAssemblies (198ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (6ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (8ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (138ms)
-			ProcessInitializeOnLoadMethodAttributes (42ms)
+			ProcessInitializeOnLoadAttributes (135ms)
+			ProcessInitializeOnLoadMethodAttributes (41ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -118,50 +118,50 @@ Domain Reload Profiling: 547ms
 Worker process is ready to serve import requests
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.566 seconds
+- Loaded All Assemblies, in  0.544 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.491 seconds
-Domain Reload Profiling: 1054ms
-	BeginReloadAssembly (136ms)
+- Finished resetting the current domain, in  0.451 seconds
+Domain Reload Profiling: 992ms
+	BeginReloadAssembly (147ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
+		DisableScriptedObjects (7ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (22ms)
-	RebuildCommonClasses (28ms)
+		CreateAndSetChildDomain (25ms)
+	RebuildCommonClasses (31ms)
 	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (43ms)
-	LoadAllAssembliesAndSetupDomain (347ms)
-		LoadAssemblies (278ms)
+	initialDomainReloadingComplete (41ms)
+	LoadAllAssembliesAndSetupDomain (313ms)
+		LoadAssemblies (248ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (148ms)
-			TypeCache.Refresh (128ms)
-				TypeCache.ScanAssembly (116ms)
-			ScanForSourceGeneratedMonoScriptInfo (13ms)
-			ResolveRequiredComponents (4ms)
-	FinalizeReload (491ms)
+		AnalyzeDomain (139ms)
+			TypeCache.Refresh (123ms)
+				TypeCache.ScanAssembly (109ms)
+			ScanForSourceGeneratedMonoScriptInfo (11ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (452ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (372ms)
+		SetupLoadedEditorAssemblies (345ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (6ms)
-			SetLoadedEditorAssemblies (3ms)
+			SetLoadedEditorAssemblies (2ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (56ms)
-			ProcessInitializeOnLoadAttributes (281ms)
-			ProcessInitializeOnLoadMethodAttributes (19ms)
-			AfterProcessingInitializeOnLoad (8ms)
+			BeforeProcessingInitializeOnLoad (53ms)
+			ProcessInitializeOnLoadAttributes (260ms)
+			ProcessInitializeOnLoadMethodAttributes (17ms)
+			AfterProcessingInitializeOnLoad (7ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (8ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 4.99 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 3.54 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3125 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 19 unused Assets / (54.5 KB). Loaded Objects now: 3597.
+Unloading 19 unused Assets / (54.6 KB). Loaded Objects now: 3597.
 Memory consumption went from 119.5 MB to 119.5 MB.
-Total: 3.068200 ms (FindLiveObjects: 0.271000 ms CreateObjectMapping: 0.168800 ms MarkObjects: 2.530700 ms  DeleteObjects: 0.096700 ms)
+Total: 3.351300 ms (FindLiveObjects: 0.460300 ms CreateObjectMapping: 0.258700 ms MarkObjects: 2.533000 ms  DeleteObjects: 0.098100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -179,183 +179,200 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 350547.276999 seconds.
-  path: Assets/Prefabs/Player.prefab
-  artifactKey: Guid(2f81a98337bcb9342ba228849efe4042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player.prefab using Guid(2f81a98337bcb9342ba228849efe4042) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
-[PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'b6783df0ce3d7b47422d9028fabd2ee6') in 0.119695 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 358
-========================================================================
-Received Import Request.
-  Time since last request: 276.267699 seconds.
-  path: Assets/Animations/Pro Longbow Pack/fall a land to standing idle 01.fbx
-  artifactKey: Guid(726b21b86a77c9f4fa607a58c1729bf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Pro Longbow Pack/fall a land to standing idle 01.fbx using Guid(726b21b86a77c9f4fa607a58c1729bf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '1c20639a55a43d70116d349252d259b1') in 0.005716 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 135
-========================================================================
-Received Import Request.
-  Time since last request: 0.003745 seconds.
-  path: Assets/Animations/Pro Longbow Pack/standing aim recoil.fbx
-  artifactKey: Guid(758a2fba3e68fd94897ac9ca77b0d937) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Pro Longbow Pack/standing aim recoil.fbx using Guid(758a2fba3e68fd94897ac9ca77b0d937) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'f378a33d35621126706f51907cb2113e') in 0.003502 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 135
-========================================================================
-Received Import Request.
-  Time since last request: 0.007424 seconds.
+  Time since last request: 351112.519343 seconds.
   path: Assets/Animations/Pro Longbow Pack/standing aim walk right.fbx
   artifactKey: Guid(88e88c205ac3a234c85ca30da9d3948e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Animations/Pro Longbow Pack/standing aim walk right.fbx using Guid(88e88c205ac3a234c85ca30da9d3948e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'becd0eeaeb072f60495dbec2bc8a9ef4') in 0.004451 seconds
+ -> (artifact id: '1639ace0f17733081bfffc1695f53207') in 0.025898 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 135
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Animations/Pro Longbow Pack/standing aim walk left.fbx
-  artifactKey: Guid(f800039c2c568ad418051d6b5ed04325) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Pro Longbow Pack/standing aim walk left.fbx using Guid(f800039c2c568ad418051d6b5ed04325) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '70ab299cd40ed068bbdfbc3d73cfb8c9') in 0.004441 seconds
+  Time since last request: 0.085224 seconds.
+  path: Assets/Animations/Pro Longbow Pack/fall a land to run forward.fbx
+  artifactKey: Guid(35a85fde75d68c8489c341095d96d621) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Pro Longbow Pack/fall a land to run forward.fbx using Guid(35a85fde75d68c8489c341095d96d621) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'd6931179670714718ad8286c1a344f48') in 0.002863 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 135
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Animations/Pro Longbow Pack/standing death backward 01.fbx
-  artifactKey: Guid(842bd23cd51a24741b3e506a09b39500) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Pro Longbow Pack/standing death backward 01.fbx using Guid(842bd23cd51a24741b3e506a09b39500) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '234fd5a911cd314c4b038af17cd378b5') in 0.004211 seconds
+  Time since last request: 0.008042 seconds.
+  path: Assets/Animations/Pro Longbow Pack/standing aim recoil.fbx
+  artifactKey: Guid(758a2fba3e68fd94897ac9ca77b0d937) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Pro Longbow Pack/standing aim recoil.fbx using Guid(758a2fba3e68fd94897ac9ca77b0d937) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'ecb749051bc2a025ffdc8c7585f698e5') in 0.003229 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 135
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Animations/Pro Longbow Pack/standing idle 02 looking.fbx
-  artifactKey: Guid(7d77913e0e89b2543832e6abba90a533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Pro Longbow Pack/standing idle 02 looking.fbx using Guid(7d77913e0e89b2543832e6abba90a533) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'd87f72f9cbbdf1256c8fde54b4883dcd') in 0.003526 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 135
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Animations/Pro Longbow Pack/standing draw arrow.fbx
-  artifactKey: Guid(b5f40b3f076ebbc4785f46e6290f8917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Pro Longbow Pack/standing draw arrow.fbx using Guid(b5f40b3f076ebbc4785f46e6290f8917) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'e7e434107ced782b2e5bb457f59053ff') in 0.003784 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 135
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Animations/Pro Longbow Pack/standing run back.fbx
-  artifactKey: Guid(94f2618e6a599cc43a3058df5f4d005b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Pro Longbow Pack/standing run back.fbx using Guid(94f2618e6a599cc43a3058df5f4d005b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '0b0cf2ff916a8a19b8a038b981c14e5c') in 0.005467 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 135
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Animations/Pro Longbow Pack/standing turn 90 left.fbx
-  artifactKey: Guid(48d63875ab5f92b4890387839f49dea1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Pro Longbow Pack/standing turn 90 left.fbx using Guid(48d63875ab5f92b4890387839f49dea1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'c4080c554312151fc57bed242e83de54') in 0.004443 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 135
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Animations/Pro Longbow Pack/standing run forward stop.fbx
-  artifactKey: Guid(60015b7d8c68c1e409482dad7555e01d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Pro Longbow Pack/standing run forward stop.fbx using Guid(60015b7d8c68c1e409482dad7555e01d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '04d704dd5d5a447416e811ff43f0f0df') in 0.004072 seconds
+  Time since last request: 0.007667 seconds.
+  path: Assets/Animations/Pro Longbow Pack/standing aim walk forward.fbx
+  artifactKey: Guid(43e10f68b5487014e85b31d820ebb294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Pro Longbow Pack/standing aim walk forward.fbx using Guid(43e10f68b5487014e85b31d820ebb294) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'b48feed9d08fc6a9d4ceef2ec6f43a07') in 0.005183 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 135
 ========================================================================
 Received Import Request.
   Time since last request: 0.000023 seconds.
-  path: Assets/Animations/Pro Longbow Pack/unarmed idle 01.fbx
-  artifactKey: Guid(08b58aa805a321a4b8d8430a8d30032d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Pro Longbow Pack/unarmed idle 01.fbx using Guid(08b58aa805a321a4b8d8430a8d30032d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '99310ec97d5876288ae2f7a017443bf6') in 0.004516 seconds
+  path: Assets/Animations/Pro Longbow Pack/standing block.fbx
+  artifactKey: Guid(420b6b43c007d484a835ef29b248d9a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Pro Longbow Pack/standing block.fbx using Guid(420b6b43c007d484a835ef29b248d9a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '45d94c68da60039c9ba4a58eadd402da') in 0.003468 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 135
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000029 seconds.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Animations/Pro Longbow Pack/standing run back.fbx
+  artifactKey: Guid(94f2618e6a599cc43a3058df5f4d005b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Pro Longbow Pack/standing run back.fbx using Guid(94f2618e6a599cc43a3058df5f4d005b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '674b1067a2ad3cc87900d2c9263816cb') in 0.003503 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 135
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Animations/Pro Longbow Pack/standing idle 02 looking.fbx
+  artifactKey: Guid(7d77913e0e89b2543832e6abba90a533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Pro Longbow Pack/standing idle 02 looking.fbx using Guid(7d77913e0e89b2543832e6abba90a533) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '46ce1694a72ead01d083177d969cfdfa') in 0.003357 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 135
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Animations/Pro Longbow Pack/standing idle 01.fbx
+  artifactKey: Guid(8f8201cba057fac43a630eb1015785d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Pro Longbow Pack/standing idle 01.fbx using Guid(8f8201cba057fac43a630eb1015785d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '09667e719042b405e02678732dff7e4f') in 0.004276 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 135
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Animations/Pro Longbow Pack/standing death forward 01.fbx
+  artifactKey: Guid(707d5ddac162887448c001ab1ac10af2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Pro Longbow Pack/standing death forward 01.fbx using Guid(707d5ddac162887448c001ab1ac10af2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'bb1541ac4b551170c4b864bafe49640d') in 0.004838 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 135
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Animations/Pro Longbow Pack/standing draw arrow.fbx
+  artifactKey: Guid(b5f40b3f076ebbc4785f46e6290f8917) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Pro Longbow Pack/standing draw arrow.fbx using Guid(b5f40b3f076ebbc4785f46e6290f8917) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'a7c205437603cc2ef17294de38072146') in 0.006118 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 135
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Animations/Pro Longbow Pack/standing disarm bow.fbx
+  artifactKey: Guid(04582fa9121d66147b40067046953d39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Pro Longbow Pack/standing disarm bow.fbx using Guid(04582fa9121d66147b40067046953d39) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '8a8fb9a06c6d2dc8885ce8f5b242a3d2') in 0.004724 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 135
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Animations/Pro Longbow Pack/standing turn 90 right.fbx
+  artifactKey: Guid(3bd8432168a3b4f4ab881625324ab98a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Pro Longbow Pack/standing turn 90 right.fbx using Guid(3bd8432168a3b4f4ab881625324ab98a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'de66682103570c15fbc6a1829d2a5e6c') in 0.003590 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 135
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Animations/Pro Longbow Pack/standing aim walk left.fbx
+  artifactKey: Guid(f800039c2c568ad418051d6b5ed04325) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Pro Longbow Pack/standing aim walk left.fbx using Guid(f800039c2c568ad418051d6b5ed04325) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'efb96c192a84c73d04fd25511f39d7ae') in 0.003186 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 135
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
   path: Assets/Animations/Pro Longbow Pack/standing idle 03 examine.fbx
   artifactKey: Guid(9e6ac9cd246796c40a7aea747e4146c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Animations/Pro Longbow Pack/standing idle 03 examine.fbx using Guid(9e6ac9cd246796c40a7aea747e4146c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'e0a1bf0d5d7cbabf09c0d2024b389e79') in 0.004404 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 135
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Animations/Pro Longbow Pack/standing dodge left.fbx
-  artifactKey: Guid(440a61d3704fbb449913a9d43a10fa44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Pro Longbow Pack/standing dodge left.fbx using Guid(440a61d3704fbb449913a9d43a10fa44) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'dce0c22ba78c525d512d1dfafec1137a') in 0.006694 seconds
+ -> (artifact id: '17eabfc925427f34416c0777359e1bb1') in 0.004415 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 135
 ========================================================================
 Received Import Request.
   Time since last request: 0.000025 seconds.
+  path: Assets/Animations/Pro Longbow Pack/standing dive forward.fbx
+  artifactKey: Guid(86f62d2cfa981df48bee4c1c8bd8ce34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Pro Longbow Pack/standing dive forward.fbx using Guid(86f62d2cfa981df48bee4c1c8bd8ce34) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '405a9c700628e83020e5ac5ba11b973f') in 0.004859 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 135
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
   path: Assets/Animations/Pro Longbow Pack/standing walk forward.fbx
   artifactKey: Guid(cde0248264052914d8adb30536bf07b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Animations/Pro Longbow Pack/standing walk forward.fbx using Guid(cde0248264052914d8adb30536bf07b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '50945f46cb89873928803e18649455b4') in 0.004892 seconds
+ -> (artifact id: '0902525ae2e5df908e2a1a8e66b04aed') in 0.004848 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 135
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Animations/Pro Longbow Pack/standing melee punch.fbx
-  artifactKey: Guid(02cac553c3ccc2b42817be174193795a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Pro Longbow Pack/standing melee punch.fbx using Guid(02cac553c3ccc2b42817be174193795a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'e9ebfdf9d18cc3728f19a5ca5314f0a6') in 0.004147 seconds
+  Time since last request: 0.000023 seconds.
+  path: Assets/Animations/Pro Longbow Pack/standing aim overdraw.fbx
+  artifactKey: Guid(583ab59274cb63d48879e9b627226760) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Pro Longbow Pack/standing aim overdraw.fbx using Guid(583ab59274cb63d48879e9b627226760) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '901da044c3dd46226651920e4833308c') in 0.003508 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 135
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Animations/Pro Longbow Pack/standing dodge forward.fbx
+  artifactKey: Guid(f5432917206617845a182dd9d9eac104) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Pro Longbow Pack/standing dodge forward.fbx using Guid(f5432917206617845a182dd9d9eac104) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: 'ccca24aa03a18206bf091a6a640368bf') in 0.003373 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 135
 ========================================================================
 Received Import Request.
   Time since last request: 0.000024 seconds.
-  path: Assets/Animations/Pro Longbow Pack/standing run right.fbx
-  artifactKey: Guid(8ad6f665334f9224abdcf86f97400bc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Pro Longbow Pack/standing run right.fbx using Guid(8ad6f665334f9224abdcf86f97400bc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'c9a1a9169bb477241e7205bfd21ed46e') in 0.004361 seconds
+  path: Assets/Animations/Pro Longbow Pack/standing dodge right.fbx
+  artifactKey: Guid(669bc5d02a8c5a041869f0b9c07d3ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Pro Longbow Pack/standing dodge right.fbx using Guid(669bc5d02a8c5a041869f0b9c07d3ef9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '3496f4e72577c4d7bc45827e076d8a68') in 0.003691 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 135
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Animations/Pro Longbow Pack/standing equip bow.fbx
-  artifactKey: Guid(0bba7806efefe404089d79db9e12c61e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Pro Longbow Pack/standing equip bow.fbx using Guid(0bba7806efefe404089d79db9e12c61e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: 'd61c7332ef7476d021594702f7f857c8') in 0.003993 seconds
+  Time since last request: 0.000018 seconds.
+  path: Assets/Animations/Pro Longbow Pack/standing melee kick.fbx
+  artifactKey: Guid(b03e83e5c9321e846a1ebed822ed2e94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Pro Longbow Pack/standing melee kick.fbx using Guid(b03e83e5c9321e846a1ebed822ed2e94) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
+ -> (artifact id: '61929e248b88fdd00744cf695cd4afb6') in 0.003374 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 135
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000016 seconds.
+  Time since last request: 0.000013 seconds.
   path: Assets/Animations/Pro Longbow Pack/standing run left.fbx
   artifactKey: Guid(f88043255a198c14caf44c4d8680138e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Animations/Pro Longbow Pack/standing run left.fbx using Guid(f88043255a198c14caf44c4d8680138e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '583402d8f125e336e0e6070a8fe5abcf') in 0.003400 seconds
+ -> (artifact id: '348bc99ed69b2ec08b7b8f6e8eed2e1a') in 0.003260 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 135
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000022 seconds.
+  Time since last request: 0.000024 seconds.
   path: Assets/Animations/Pro Longbow Pack/standing dodge backward.fbx
   artifactKey: Guid(5e359289b27610d40bbf360e22112f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Animations/Pro Longbow Pack/standing dodge backward.fbx using Guid(5e359289b27610d40bbf360e22112f78) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 16 workers.
- -> (artifact id: '4a722387b094b96b0e74264fffda9b9b') in 0.003903 seconds
+ -> (artifact id: '34f38375c9cba563151ee1aa65c0dd74') in 0.003611 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 135
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout

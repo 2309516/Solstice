@@ -363,13 +363,29 @@ MonoBehaviour:
   arrowSpawnPoint: {fileID: 635940525}
   mainCamera: {fileID: 1939023398}
   playerTransform: {fileID: 803918265}
-  playerAnimator: {fileID: 624835097}
   arrowForce: 25
   zoomFOV: 60
   normalFOV: 90
   zoomSpeed: 5
   slowMotionTimeScale: 0.3
-  rotationSpeed: 10
+  maxSlowdownDuration: 2
+  cooldownTime: 5
+--- !u!114 &624835103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624835090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b434a5b7fa2645040a30cd00742ac190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input:
+    forwardInput: Vertical
+    sideInput: Horizontal
+    sprintInput: Sprint
 --- !u!4 &635940525 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1212393692824576205, guid: 2f81a98337bcb9342ba228849efe4042, type: 3}
@@ -546,7 +562,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d98d95d8750e7484fa33132b405ef3a6, type: 2}
+  - {fileID: 2100000, guid: cf4d18d648b7ce74a92866f8f6bd0b80, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1268,6 +1284,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 572036996298374673, guid: 2f81a98337bcb9342ba228849efe4042, type: 3}
       insertIndex: -1
       addedObject: {fileID: 624835098}
+    - targetCorrespondingSourceObject: {fileID: 572036996298374673, guid: 2f81a98337bcb9342ba228849efe4042, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 624835103}
   m_SourcePrefab: {fileID: 100100000, guid: 2f81a98337bcb9342ba228849efe4042, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
