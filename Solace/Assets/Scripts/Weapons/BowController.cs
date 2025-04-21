@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class BowController : MonoBehaviour
 {
@@ -35,6 +36,7 @@ public class BowController : MonoBehaviour
         public float arrowCount;
         public GameObject arrowPrefab;
         public Transform arrowPosition;
+        public Transform arrowEquipParent;
 
         [Header("Equip & Unequip Settings")]
         public Transform EquipPos;
@@ -54,8 +56,10 @@ public class BowController : MonoBehaviour
 
         [Header("Crosshair Settings")]
         public GameObject crosshairPrefab;
-        public GameObject currentCrosshair;
+        private GameObject currentCrosshair;
 
+
+        GameObject currentArrow;
         bool canPullString = false;
         bool canFireArrow = false;
 
@@ -81,6 +85,27 @@ public class BowController : MonoBehaviour
         }
     }
 
+    public void PickArrow()
+    {
+        bowSettings.arrowPosition.gameObject.SetActive(true);
+    }
+
+    public void DisableArrow()
+    {
+        bowSettings.arrowPosition.gameObject.SetActive(false);
+    }
+
+    public void PullString()
+    {
+        bowSettings.bowString.transform.position = bowSettings.stringPullPos.position;
+        bowSettings.bowString.transform.parent = bowSettings.stringPullPos;
+    }
+
+    public void Release()
+    {
+        bowSettings.bowString.transform.position = bowSettings.stringInitialPos.position;
+        bowSettings.bowString.transform.parent = bowSettings.stringInitialParent;
+    }
     void equipBow()
     {
         this.transform.position = bowSettings.EquipPos.position;
